@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Mãe Maria da Pedreira</title>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <main class="login-container">
+    <div class="login-box">
+      <img src="assets/logo.png" alt="Logo do Terreiro" class="login-logo">
+
+      <h1>Acesso ao Acervo</h1>
+
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="senha" placeholder="Senha">
+
+      <button onclick="login()">Entrar</button>
+
+      <p id="erro-login" class="erro"></p>
+    </div>
+  </main>
+
+  <!-- Firebase Auth -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "acervo-mae-maria-da-pedreira.firebaseapp.com",
+      projectId: "acervo-mae-maria-da-pedreira",
+      storageBucket: "acervo-mae-maria-da-pedreira.appspot.com",
+      messagingSenderId: "418579721002",
+      appId: "1:418579721002:web:SEU_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.login = function () {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+      const erro = document.getElementById("erro-login");
+
+      erro.innerText = "";
+
+      if (!email || !senha) {
+        erro.innerText = "Preencha email e senha.";
+        return;
+      }
+
+      signInWithEmailAndPassword(auth, email, senha)
+        .then(() => {
+          window.location.href = "home.html";
+        })
+        .catch(() => {
+          erro.innerText = "Email ou senha inválidos.";
+        });
+    };
+  </script>
+
+</body>
+</html>

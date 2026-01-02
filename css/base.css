@@ -1,0 +1,59 @@
+/* base.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e cores globais */
+body {
+  font-family: 'Comfortaa', cursive;
+  background-color: #f7faf7;
+  color: #1f3d2b;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #1f3d2b;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header padrão */
+header {
+  background-color: #1f3d2b;
+  color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo pequena no header */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* Menu */
+nav a {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

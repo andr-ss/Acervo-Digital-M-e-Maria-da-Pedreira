@@ -1,0 +1,48 @@
+/* ================================
+   HEADER
+================================ */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f4f3a;
+  padding: 12px 32px;
+}
+
+/* logo + nome */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* IMAGEM DA LOGO */
+.logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* texto ao lado da logo */
+.logo span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/* menu */
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav a.ativo {
+  text-decoration: underline;
+}

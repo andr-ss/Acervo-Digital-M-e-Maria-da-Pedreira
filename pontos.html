@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pontos Cantados | Mãe Maria da Pedreira</title>
+
+  <!-- Fonte Comfortaa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS (pasta /css) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/pontos.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="topo">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Mãe Maria da Pedreira" />
+      <span>Mãe Maria da Pedreira</span>
+    </div>
+
+    <nav class="menu">
+      <a href="home.html">Início</a>
+      <a href="pontos.html" class="ativo">Pontos Cantados</a>
+      <a href="notas.html">Notas</a>
+      <a href="login.html">Sair</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+    <section class="cards">
+      <div class="card">
+        <h2>Linhas de Trabalho</h2>
+        <div id="linhas-trabalho" class="lista"></div>
+      </div>
+
+      <div class="card">
+        <h2>Linha dos Orixás</h2>
+        <div id="linhas-orixas" class="lista"></div>
+      </div>
+    </section>
+
+    <section class="card card-full">
+      <h2>Pontos</h2>
+      <div id="lista-pontos" class="pontos"></div>
+    </section>
+  </main>
+
+  <!-- JS (AGORA COMO MODULE) -->
+  <script type="module" src="js/pontos.js"></script>
+</body>
+</html>

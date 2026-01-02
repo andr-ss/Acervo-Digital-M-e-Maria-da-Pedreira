@@ -1,0 +1,30 @@
+/* home.css */
+
+main {
+  padding: 40px;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 24px;
+}
+
+/* Calendário */
+.calendario {
+  max-width: 800px;
+}
+
+.ano {
+  margin-bottom: 32px;
+}
+
+.ano h2 {
+  margin-bottom: 12px;
+}
+
+.evento {
+  background-color: #eef5ef;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
